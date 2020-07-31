@@ -27,6 +27,7 @@ body {
     display: flex;
     justify-content: flex-start;
     background-color: #E8E8E8;
+    overflow: auto;
     border-top-right-radius: 10px;
 }
 
@@ -45,6 +46,7 @@ body {
 
 .contact-detail .full-container .tab-bar .bar-item:hover {
     background-color: #A9A9A9;
+    color: #fff;
     transition: all .1s ease;
     color: #fff;
 }
@@ -63,13 +65,14 @@ body {
 .contact-detail .full-container .tab-detail {
     padding: 20px 40px;
     font-size: 1.5rem;
+    overflow: auto;
 }
 
 .contact-detail .full-container .tab-detail hr {
     width: 70%;
     margin-top: 5px;
     margin-bottom: 20px;
-    transition: all .1s ease;
+    transition: all .3s ease;
 }
 
 .contact-detail .full-container .tab-detail .info-display {
@@ -146,19 +149,44 @@ body {
 }
 
 @media screen and (max-width:1700px) {
-    .contact-detail .full-container .tab-bar {
+    /* .contact-detail .full-container .tab-bar {
         flex-direction: column;
         justify-items: center;
         justify-content: center;
-    }
+    } */
+
+
+    /* .contact-detail .full-container {
+        transform: scale(0.8);
+    } */
+
+    /* .contact-detail .full-container .tab-bar .bar-item {
+        width: 200px;
+    } */
 
     .contact-detail .full-container .tab-bar .bar-item {
-        width: 270px;
-        margin: 0 auto;
+        width: 120px;
+        font-size: 1.5rem;
+        height: 40px;
+        transition: all .3s ease;
     }
 }
 
 @media screen and (max-width:1069px) {
+    .contact-detail .full-container .tab-bar {
+        /* flex-direction: column; */
+        /* justify-items: center; */
+        /* justify-content: center; */
+        flex-wrap: wrap;
+    }
+
+    .contact-detail .full-container .tab-bar .bar-item {
+        width: 200px;
+        margin: 0 auto;
+        /* margin-top: 10px; */
+        transition: all .3s ease;
+    }
+
     .contact-detail .full-container .btn-container {
         flex-direction: column;
         margin: 5px 0;
@@ -171,28 +199,25 @@ body {
     }
 }
 
-@media screen and (max-width:575px) {
-    .contact-detail .full-container .tab-bar .bar-item {
-        width: 100%;
-        transition: all .1s ease;
-        overflow: auto
-    }
-
-    .contact-detail .full-container .btn-container button.btn {
-        width: 90%;
-        transition: all .1s ease;
-        overflow: auto
+@media screen and (max-width:576px) {
+    .contact-detail .full-container .tab-detail .score-container {
+        justify-content: center;
+        margin-bottom: 20px
     }
 
     .contact-detail .full-container .tab-detail hr {
         width: 100%;
-        transition: all .1s ease;
-        overflow: auto
+        transition: all .3s ease;
+    }
+}
+
+@media screen and (max-width:516px) {
+    .contact-detail .full-container .tab-bar .bar-item {
+        width: 100%;
+        transition: all .3s ease;
     }
 
-    .contact-detail .full-container .tab-detail .score-container {
-        justify-content: center;
-        margin-bottom: 20px;
-        overflow: auto
+    .contact-detail .full-container .btn-container button.btn {
+        width: 100%;
     }
 }
